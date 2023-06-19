@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">     -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(/img/decoracion/abstracto.jpeg);
+            background-size: cover ;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'miFuente'; 
+            overflow-x: hidden;
+            
+            
+            
+        }
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+
+        
+        header{
+            display:flex;
+            height: fit-content;
+            width: 100vw;
+            /* background: rgba(97,92,92,1); */
+            flex-direction: column;
+            margin-bottom: 15px;
+
+        }
+        main{
+            display:flex;
+            width: 100vw;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer{
+            display:flex;
+            height: 10vh;
+            width: 100vw;
+            flex-direction: column;
+            background: rgba(97,92,92,1);
+        }
+
+        h1{
+            margin: 0;
+            letter-spacing: 0.5ex;
+            margin-left: 2rem;
+
+        }
+
+        ul{
+            display:flex;
+            justify-content:space-evenly;
+       
+        }
+        a{
+            display:inline-flex;
+            color: rgba(255,255,255,1);
+            top: 198px;
+            left: 188px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            
+        }
+        .textoCabecera{
+            display:flex;
+            width: 682px;
+            color: rgba(255,255,255,1);
+            top: 0px;
+            left: 125px;
+            font-weight: Extra Bold;
+            font-size: 64px;
+            text-align: left;
+            font-family: inherit, sans-serif;
+        }
+        .contFotoCabecera{
+            display: flex;
+            z-index: 10;
+        }
+        .fotoCabecera{
+                display:flex;
+                width: 100%;
+        }
+
+        
+        .menuFooter{
+            display: flex;
+            width: 100%;
+        }
+        .galerias{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }   
+        .marco{
+            max-width: 33%;
+            height: 40vh;
+            margin: 0;
+            /* align-self:baseline; */
+            margin-bottom: 1rem;
+            background-color: white;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 2%;
+            
+        }
+        
+        .foto{
+
+            /* max-width: 90%; */
+            max-height: 90%;
+            
+        }
+       
+        img{
+            object-fit: cover;
+            /* border-radius: 2%; */
+        }
+        /* MENU A OCULTAR */
+        .menu{
+            /* ALTO Y ANCHO DEL MENU SEGÚN NECESITEMOS*/
+            /* AJUSTARLO SEGUN LONGITUD DE MENUS A METER */
+            width: 45rem;
+            height: 3.5rem;
+
+            /* CONVERTIMOS A RELATIVE PARA MOVERLO */
+            position: relative;
+            /* LO ESCONDEMOS CON -x rem O -x px EN NEGATIVO */
+            /* PODEMOS USAR LA MEDIDA QUE QUERAMOS */
+            /* left: -45rem; */
+            top: -3.5rem ;
+            left: 25rem;
+
+             /* OPCIONAL: FLEX PARA CENTRAR */
+            display: flex;
+            /* flex-direction: column; */
+            justify-content:space-between;
+            align-items: center;
+
+            /* ESTILO VISUAL MENU */
+            /* font-family: miRobotoNegrita; */
+            /* background: linear-gradient(180deg,#fff5fc 0%,rgba(245,209,235,1) 100%); */
+            background-color:transparent;
+            /* color:cadetblue; */
+            text-shadow: 1px 1px darkslategray;
+            /* border: 1px solid darkgray; */
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            /* 'transition' MUEVE DESPACIO EL MENU SEGÚN APARECE */
+            transition: 1s all ease;
+            
+            
+
+        }
+        .menu:hover{
+            /* :hover PARA QUE RECUPERE SU POSICION */
+            position: relative;
+            /* left: 0; */
+            top: 0;
+            background-color: rgba(97,92,92,1);
+            
+
+        }
+        .menuPestaña{
+            position: relative;
+            top: 25px;
+            left:40px;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="textoCabecera">PORTFOLIO</h1>
+        <div class="contFotoCabecera">
+            <!-- <img class="fotoCabecera" src="/img/decoracion/colorespasfi10.jpg" alt="" > -->
+            <!-- <img class="fotoCabecera" src="https://1.bp.blogspot.com/-XL4Br3tCL3g/U7PfReX_VcI/AAAAAAAAQpI/BmljEZJkH44/s1200/esperando.gif" alt="" > -->
+            <img class="fotoCabecera" src="/img/decoracion/esperando.gif" alt="" >
+        </div>
+
+        <nav>
+            <nav class="menuHeader">
+                <ul class="menu">
+                    <a class="menuPestaña">▼</a>
+                    <!-- <a href="/PortfolioHome.html">Galeria</a>  -->
+                    <a href="/albumes">Albumes</a>
+                    <a href="/Informacion.html">Informacion</a>
+                    <a href="/compartir.html">Compartir</a>
+                    <a class="menuPestaña"></a> 
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        <div class="galerias">
+            <figure class="marco"><img class="foto"  src="/img/coche.jpg" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="/img/Harley.jpg" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="/img/rinovertical.jpg" alt=""></figure>
+        </div>
+
+        <div class="galerias">
+            <figure class="marco"><img class="foto"  src="/img/flores.jpg" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="/img/gatovertical.jpg" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="/img/leopardo.jpg" alt=""></figure>
+       
+        </div>    
+
+        <div class="galerias">
+            <figure class="marco"><img class="foto"  src="/img/puente.jpg" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="/img/gaviota.jpg" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="/img/sunopor.jpg" alt=""></figure>
+        </div>
+
+        <div class="galerias">
+            <figure class="marco"><img class="foto"  src="https://loremflickr.com/520/420/" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="https://loremflickr.com/640/520/" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="https://loremflickr.com/800/600/" alt=""></figure>
+        </div>
+
+        <div class="galerias">
+            <figure class="marco"><img class="foto"  src="https://loremflickr.com/520/420/newyork/" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="https://loremflickr.com/640/520/paris/" alt=""></figure>
+            <figure class="marco"><img class="foto"  src="https://loremflickr.com/800/600/roma/" alt=""></figure>
+        </div>
+
+    </main>
+    <footer>
+        <nav clas="menuFooter">
+                <ul>
+                    <a href="/Galeria.html">Galeria</a>
+                    <a href="/Informacion.html">Información</a>
+                    <a href="/desarrolladores.html">Desarrolladores</a>
+                    <a href="/ayuda.html">Ayuda</a> 
+                    <a href="/condiciones.html">Condiciones</a>
+                </ul>           
+            </nav>
+    </footer>
+    
+</body>
+</html>

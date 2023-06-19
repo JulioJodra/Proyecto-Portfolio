@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartir</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+        body{
+            margin:0%;
+            background-image: url(/img/decoracion/abstracto.jpeg);
+            font-family: 'miFuente';
+            background-size: cover;
+            
+        }
+        header{
+            display:flex;
+            height:7% ;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+          
+
+        }
+        main{
+           
+            width: 100vw;
+            height: 80vh;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+
+
+        }
+        footer{
+            display:flex;
+            height: 10%;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+        }
+        
+        ul{
+            display:flex;
+            justify-content:space-evenly;
+       
+        }
+        a{
+            display:inline-flex;
+            color: rgba(255,255,255,1);
+            top: 198px;
+            left: 188px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            
+        }
+        div {
+            width: 40%;
+            height: 90%;
+            border: solid slategray;
+            border-radius: 25px;
+
+        }
+        h1, p{
+            padding: 0.5rem;
+        }
+        figure {
+            width: 40%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border: solid slategray;
+            border-radius: 25px;
+            align-items: center;
+        }
+        img {
+            height: 60%;
+            /* padding: 1rem; */
+        }
+        figcaption {
+            font-size: 0.5rem;
+            padding: 0.2rem;
+            width: fit-content;
+            /* height: 10%; */
+            background-color: black;
+            color: white;
+            border-radius: 25px;
+        }
+        .iconmenu{
+            display:block;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menuHeader">
+            <ul>
+                <a href="/PortfolioHome.html">Galeria</a> 
+                <a href="/Informacion.html">Informacion</a>
+                <!-- <a href="/compartir">Compartir</a> -->
+            </ul>
+        </nav>
+        
+
+    </header>
+    <main>
+        <div>
+            <h1>REDES SOCIALES</h1>
+            <img src="/img/decoracion/grito.svg" alt="socialmedia">
+            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla autem, magnam sapiente eligendi sint a
+                aut minus similique doloribus exercitationem officia, modi est ex beatae laudantium asperiores minima
+                pariatur ducimus.
+                Nesciunt facilis quisquam blanditiis aliquam nam voluptatibus! Dolorem nesciunt odit facere. Unde iusto
+                aperiam optio facere accusantium suscipit voluptas expedita reiciendis consequuntur, beatae repellat
+                inventore cupiditate doloremque fugit, qui eaque!</p> -->
+        </div>
+
+        <figure>
+            <!-- <img src="/img/decoracion/facebook.svg" alt="socialmedia"> -->
+            <ul class="iconmenu">
+                <li><a class="falink" href="https://www.linkedin.com/in/oloman">Linkedin</a></li>
+                <li><a class="fagoog" href="https://plus.google.com/+Oloblogger">Google+</a></li>
+                <li><a class="fatwit" href="https://twitter.com/oloblogger">Twitter</a></li>
+                <li><a class="faface" href="https://www.facebook.com/oloblogger">Facebook</a></li>
+              </ul>
+            
+        </figure>
+
+    </main>
+    <footer>
+        <nav class="menuFooter">
+            <ul>
+                <a href="/PortfolioHome.html">Galeria</a>
+                <a href="/Informacion.html">Informacion</a>
+                <a href="/desarrolladores.html">Desarrolladores</a>
+                <a href="/ayuda.html">Ayuda</a>
+                <a href="/condiciones.html">Condiciones</a>
+            </ul>
+        </nav>
+
+    </footer>
+    
+</body>
+</html>

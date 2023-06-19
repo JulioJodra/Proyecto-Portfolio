@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+        body{
+            margin:0%;
+            background-image: url(/img/decoracion/abstracto.jpeg);
+            font-family: 'miFuente';
+            background-size: cover;
+            background-attachment: fixed;
+            
+        }
+        header{
+            display:flex;
+            height:7% ;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+          
+
+        }
+        main{
+            display:flex;
+            width: 100vw;
+
+
+        }
+        footer{
+            display:flex;
+            height: 10%;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+        }
+        
+        ul{
+            display:flex;
+            justify-content:space-evenly;
+       
+        }
+        a{
+            display:inline-flex;
+            color: rgba(255,255,255,1);
+            top: 198px;
+            left: 188px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            
+        }
+        section{
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 0.5rem;
+        }
+        figure {
+            /* margin: auto; */
+            /* width: 50vw; */
+            width: 160vw;
+            height: 130vh;
+            /* border: 1px solid black; */
+            /* border-radius: 0px; */
+            padding: 5px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-items: center;
+        }
+        img {
+
+            height: 75%;
+            padding: 1rem;
+            border-radius: 5%;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menuHeader">
+            <ul>
+                <a href="/PortfolioHome.html">Galeria</a> 
+                <a href="/Informacion.html">Informacion</a>
+                <!-- <a href="/albumes">Albumes</a> -->
+                <a href="/compartir.html">Compartir</a>
+            </ul>
+        </nav>
+        
+
+    </header>
+    <main>
+
+        <section>
+            <!-- <figure>
+                <img src="/img/galeria/impa10.jpg" alt="IMPALA.JPG">
+                <figcaption>ALBUM_1</figcaption>
+            </figure> -->
+            <figure>
+                <img src="https://loremflickr.com/1024/800/" alt="imagen">
+                <!-- https://cdn.pixabay.com/photo/2016/10/13/00/03/girl-1736419__340.jpg -->
+                <figcaption>ALBUM_2</figcaption>
+            </figure>
+            <!-- <figure>
+                <img src="/img/galeria/tulip10.jpg" alt="TULIP.JPG">
+                <figcaption>ALBUM_3</figcaption>
+            </figure> -->
+        </section>
+
+
+
+        <section>
+            <!-- <figure>
+                <img src="/img/galeria/flamen10.jpg" alt="FLAMEN.JPG">
+                <figcaption>ALBUM_4</figcaption>
+            </figure> -->
+            <figure>
+                <img src="https://loremflickr.com/1200/1024/" alt="imagen">
+                <figcaption>ALBUM_5</figcaption>
+            </figure>
+            <!-- <figure>
+                <img src="/img/galeria/cielo.jpg" alt="CIELO.JPG">
+                <figcaption>ALBUM_6</figcaption>
+            </figure> -->
+        </section>
+
+
+        <section>
+            <!-- <figure>
+                <img src="/img/galeria/lanzarote10.jpg" alt="LANZARO.JPG">
+                <figcaption>ALBUM_7</figcaption>
+            </figure> -->
+            <figure>
+                <img src="https://loremflickr.com/1440/1200/" alt="imagen">
+                <figcaption>ALBUM_8</figcaption>
+            </figure>
+            <!-- <figure>
+                <img src="/img/galeria/abeja1_10.jpg" alt="ABEJA1.JPG">
+                <figcaption>ALBUM_9</figcaption>
+            </figure> -->
+        </section>
+
+        <section>
+            <!-- <figure>
+                <img src="/img/galeria/escalera.jpg" alt="ESCALERA.JPG">
+                <figcaption>ALBUM_10</figcaption>
+            </figure> -->
+            <figure>
+                <img src="https://loremflickr.com/800/600/" alt="imagen">
+                <figcaption>ALBUM_11</figcaption>
+            </figure>
+            <!-- <figure>
+                <img src="/img/galeria/limones.jpg" alt="LIMONES.JPG">
+                <figcaption>ALBUM_12</figcaption>
+            </figure> -->
+        </section>
+
+    </main>
+    <footer>
+        <nav class="menuFooter">
+            <ul>
+                <a href="/PortfolioHome.html">Galeria</a>
+                <a href="/Informacion.html">Informacion</a>
+                <a href="/desarrolladores.html">Desarrolladores</a>
+                <a href="/ayuda.html">Ayuda</a>
+                <a href="/condiciones.html">Condiciones</a>
+            </ul>
+        </nav>
+
+    </footer>
+    
+</body>
+</html>

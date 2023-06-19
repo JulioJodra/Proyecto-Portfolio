@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+        body{
+            margin:0%;
+            background-image: url(/img/decoracion/abstracto.jpeg);
+            font-family: 'miFuente';
+            background-size: cover;
+            background-attachment: fixed;
+            
+        }
+        header{
+            display:flex;
+            height:7% ;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+          
+
+        }
+        main{
+           
+            width: 100vw;
+
+
+        }
+        footer{
+            display:flex;
+            height: 10%;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+        }
+        
+        ul{
+            display:flex;
+            justify-content:space-evenly;
+       
+        }
+        a{
+            display:inline-flex;
+            color: rgba(255,255,255,1);
+            top: 198px;
+            left: 188px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            
+        }
+        section{
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 0.5rem;
+        }
+        figure {
+            /* margin: auto; */
+            /* width: 50vw; */
+            width: 45%;
+            height: 40vh;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+            padding: 5px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-items: center;
+        }
+        img {
+
+            height: 75%;
+            padding: 1rem;
+            border-radius: 10%;
+        }
+        .entrar{
+            font-family: 'Roboto', sans-serif;
+            text-decoration-color: black;
+
+        }
+        .Enlace{
+
+            height: 75%;
+            padding: 1rem;
+            border-radius: 10%;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menuHeader">
+            <ul>
+                <a href="/PortfolioHome.html">Galeria</a> 
+                <a href="/Informacion.html">Informacion</a>
+                <!-- <a href="/albumes">Albumes</a> -->
+                <a href="/compartir.html">Compartir</a>
+            </ul>
+        </nav>
+        
+
+    </header>
+    <main>
+
+        <section>
+            <figure>
+                <!-- <img src="/img/galeria/impa10.jpg" alt="IMPALA.JPG"> -->
+                <a class="Enlace" href="/album1.html"><img src="/img/galeria/impa10.jpg" alt="Impala" /></a>
+                <figcaption>ALBUM_1</figcaption>
+            </figure>
+            <figure>
+                <!-- <figure class="marco"><img class="foto"  src="/img/coche.jpg" alt=""></figure> -->
+            <a class="Enlace" href="/album2.html"><img src="/img/galeria/flores10.jpg" alt="FLORES"></a>
+                <figcaption>ALBUM_2</figcaption>
+            </figure>
+            <figure>
+                <a class="Enlace" href="/album3.html"><img src="/img/galeria/tulip10.jpg" alt="TULIPANES"></a>
+                <figcaption>ALBUM_3</figcaption>
+                <!-- <a title="Entrar" href="/album3.html"><img src="/img/galeria/tulip10.jpg" alt="TULIPANES"></a>
+                <figcaption>ALBUM_3</figcaption> -->
+            </figure>
+        </section>
+
+
+
+        <section>
+            <figure>
+                <a class="Enlace" href="/album4.html"><img src="/img/galeria/flamen10.jpg" alt="FLAMENCOS"></a>
+                <figcaption>ALBUM_4</figcaption>
+            </figure>
+            <figure>
+                <a class="Enlace" href="/album5.html"><img src="/img/galeria/madrid.jpg" alt="MADRID"></a>
+                <figcaption>ALBUM_5</figcaption>
+            </figure>
+            <figure>
+                <a class="Enlace" href="/album6.html"><img src="/img/galeria/cielo.jpg" alt="CIELO"></a>
+                <figcaption>ALBUM_6</figcaption>
+            </figure>
+        </section>
+
+
+        <section>
+            <figure>
+                <a class="Enlace" href="/album7.html"><img src="/img/galeria/lanzarote10.jpg" alt="LANZAROTE"></a>
+                <figcaption>ALBUM_7</figcaption>
+            </figure>
+            <figure>
+                <a class="Enlace" href="/album8.html"><img src="/img/galeria/desenfoque10.jpg" alt="DESEMFOQUE"></a>
+                <figcaption>ALBUM_8</figcaption>
+            </figure>
+            <figure>
+                <a class="Enlace" href="/album9.html"><img src="/img/galeria/abeja1_10.jpg" alt="ABEJA"></a>
+                <figcaption>ALBUM_9</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <figure>
+                <a class="Enlace" href="/album10.html"><img src="/img/galeria/escalera.jpg" alt="ESCALERA"></a>
+                <figcaption>ALBUM_10</figcaption>
+            </figure>
+            <figure>
+                <a class="Enlace" href="/album11.html"><img src="/img/galeria/fresas.jpg" alt="FRESAS"></a>
+                <figcaption>ALBUM_11</figcaption>
+            </figure>
+            <figure>
+                <a class="Enlace" href="/album12.html"><img src="/img/galeria/limones.jpg" alt="LIMONES"></a>
+                <figcaption>ALBUM_12</figcaption>
+            </figure>
+        </section>
+
+    </main>
+    <footer>
+        <nav class="menuFooter">
+            <ul>
+                <a href="/PortfolioHome.html">Galeria</a>
+                <a href="/Informacion.html">Informacion</a>
+                <a href="/desarrolladores.html">Desarrolladores</a>
+                <a href="/ayuda.html">Ayuda</a>
+                <a href="/condiciones.html">Condiciones</a>
+            </ul>
+        </nav>
+
+    </footer>
+    
+</body>
+</html>
