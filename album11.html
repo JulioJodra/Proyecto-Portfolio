@@ -25,8 +25,9 @@
             display:flex;
             height:7% ;
             width: 100%;
-            background: rgba(97,92,92,1);
+            /* background: rgba(97,92,92,1); */
             flex-direction: column;
+            align-items: center;
 
           
 
@@ -34,6 +35,7 @@
         main{
             display:flex;
             width: 100vw;
+            justify-content: space-around;
 
 
         }
@@ -57,38 +59,171 @@
             top: 198px;
             left: 188px;
             font-family: 'Roboto', sans-serif;
-            font-weight: 900;
-            font-size: 1.5rem;
+            font-weight: 100;
+            font-size: 1rem;
             letter-spacing: 0.3rem;
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             
         }
-        section{
-            width: 100vw;
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 0.5rem;
-        }
-        figure {
-            /* margin: auto; */
-            /* width: 50vw; */
-            width: 160vw;
-            height: 130vh;
-            /* border: 1px solid black; */
-            /* border-radius: 0px; */
-            padding: 5px;
+         /* MENU A OCULTAR */
+         .menu{
+            /* ALTO Y ANCHO DEL MENU SEGÚN NECESITEMOS*/
+            /* AJUSTARLO SEGUN LONGITUD DE MENUS A METER */
+            width: 40rem;
+            height: 3.5rem;
 
+            /* CONVERTIMOS A RELATIVE PARA MOVERLO */
+            position: relative;
+            /* LO ESCONDEMOS CON -x rem O -x px EN NEGATIVO */
+            /* PODEMOS USAR LA MEDIDA QUE QUERAMOS */
+            /* left: -45rem; */
+            top: -3.5rem ;
+
+             /* OPCIONAL: FLEX PARA CENTRAR */
             display: flex;
-            flex-direction: column;
-            justify-content:space-evenly;
+            /* flex-direction: column; */
+            justify-content:space-between;
             align-items: center;
-        }
-        img {
 
-            height: 75%;
-            padding: 1rem;
-            border-radius: 5%;
+            /* ESTILO VISUAL MENU */
+            /* font-family: miRobotoNegrita; */
+            /* background: linear-gradient(180deg,#fff5fc 0%,rgba(245,209,235,1) 100%); */
+            background-color:transparent;
+            /* color:cadetblue; */
+            text-shadow: 1px 1px darkslategray;
+            /* border: 1px solid darkgray; */
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            /* 'transition' MUEVE DESPACIO EL MENU SEGÚN APARECE */
+            transition: 1s all ease;
         }
+        .menu:hover{
+            /* :hover PARA QUE RECUPERE SU POSICION */
+            position: relative;
+            /* left: 0; */
+            top: 0;
+            background-color: rgba(97,92,92,1);
+        }
+        .menuPestaña{
+            position: relative;
+            top: 25px;
+            left:40px;
+            font-size: 0.9rem;
+            color: white;
+        }
+       
+        
+        
+        /* *******************CODIGO CARRUSEL*********************** */
+        .slide {
+                position: relative;
+                box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+                margin-top: 26px;
+            }
+            .slide-inner {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                /* height: calc( 300px + 3em); */
+            }
+            .slide-open:checked + .slide-item {
+                position: static;
+                opacity: 100;
+            }
+            .slide-item {
+                position: absolute;
+                opacity: 0;
+                -webkit-transition: opacity 3s ease-out;
+                transition: opacity 3s ease-out;
+            }
+            .slide-item img {
+                margin-bottom: 1%;
+                display: block;
+               /* height: auto;  */
+                max-width: 100%;
+            }
+            .slide-control {
+                background: rgba(0, 0, 0, 0.28);
+                border-radius: 50%;
+                color: #fff;
+                cursor: pointer;
+                display: none;
+                font-size: 40px;
+                height: 40px;
+                line-height: 35px;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                cursor: pointer;
+                -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                text-align: center;
+                width: 40px;
+                z-index: 10;
+            }
+            .slide-control.prev {
+                left: 2%;
+            }
+            .slide-control.next {
+                right: 2%;
+            }
+            .slide-control:hover {
+                background: rgba(0, 0, 0, 0.8);
+                color: #aaaaaa;
+            }
+            #slide-1:checked ~ .control-1,
+            #slide-2:checked ~ .control-2,
+            #slide-3:checked ~ .control-3 {
+                display: block;
+            }
+            .slide-indicador {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                bottom: 2%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 10;
+            }
+            .slide-indicador li {
+                display: inline-block;
+                margin: 0 5px;
+            }
+            .slide-circulo {
+                color: #828282;
+                cursor: pointer;
+                display: block;
+                font-size: 35px;
+            }
+            .slide-circulo:hover {
+                color: #aaaaaa;
+            }
+            #slide-1:checked ~ .control-1 ~ .slide-indicador 
+                 li:nth-child(1) .slide-circulo,
+            #slide-2:checked ~ .control-2 ~ .slide-indicador 
+                  li:nth-child(2) .slide-circulo,
+            #slide-3:checked ~ .control-3 ~ .slide-indicador 
+                  li:nth-child(3) .slide-circulo {
+                color: #428bca;
+            }
+            #titulo {
+                width: 100%;
+                position: absolute;
+                padding: 0px;
+                margin: 0px auto;
+                text-align: center;
+                font-size: 27px;
+                color: rgba(255, 255, 255, 1);
+                font-family: 'Open Sans', sans-serif;
+                z-index: 9999;
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+                     -1px 0px 2px rgba(255, 255, 255, 0);
+            }
+        
 
 
     </style>
@@ -96,82 +231,58 @@
 <body>
     <header>
         <nav class="menuHeader">
-            <ul>
-                <a href="/PortfolioHome.html">Galeria</a> 
+            <ul class="menu">
+                <a class="menuPestaña">▼</a>
+                <a href="/Galeria.html">Galeria</a> 
                 <a href="/Informacion.html">Informacion</a>
                 <!-- <a href="/albumes">Albumes</a> -->
                 <a href="/compartir.html">Compartir</a>
+                <a class="menuPestaña"></a> 
             </ul>
         </nav>
         
 
     </header>
     <main>
-
-        <section>
-            <!-- <figure>
-                <img src="/img/galeria/impa10.jpg" alt="IMPALA.JPG">
-                <figcaption>ALBUM_1</figcaption>
-            </figure> -->
-            <figure>
-                <img src="https://loremflickr.com/1024/800/" alt="imagen">
-                <!-- https://cdn.pixabay.com/photo/2016/10/13/00/03/girl-1736419__340.jpg -->
-                <figcaption>ALBUM_2</figcaption>
-            </figure>
-            <!-- <figure>
-                <img src="/img/galeria/tulip10.jpg" alt="TULIP.JPG">
-                <figcaption>ALBUM_3</figcaption>
-            </figure> -->
-        </section>
-
-
-
-        <section>
-            <!-- <figure>
-                <img src="/img/galeria/flamen10.jpg" alt="FLAMEN.JPG">
-                <figcaption>ALBUM_4</figcaption>
-            </figure> -->
-            <figure>
-                <img src="https://loremflickr.com/1200/1024/" alt="imagen">
-                <figcaption>ALBUM_5</figcaption>
-            </figure>
-            <!-- <figure>
-                <img src="/img/galeria/cielo.jpg" alt="CIELO.JPG">
-                <figcaption>ALBUM_6</figcaption>
-            </figure> -->
-        </section>
-
-
-        <section>
-            <!-- <figure>
-                <img src="/img/galeria/lanzarote10.jpg" alt="LANZARO.JPG">
-                <figcaption>ALBUM_7</figcaption>
-            </figure> -->
-            <figure>
-                <img src="https://loremflickr.com/1440/1200/" alt="imagen">
-                <figcaption>ALBUM_8</figcaption>
-            </figure>
-            <!-- <figure>
-                <img src="/img/galeria/abeja1_10.jpg" alt="ABEJA1.JPG">
-                <figcaption>ALBUM_9</figcaption>
-            </figure> -->
-        </section>
-
-        <section>
-            <!-- <figure>
-                <img src="/img/galeria/escalera.jpg" alt="ESCALERA.JPG">
-                <figcaption>ALBUM_10</figcaption>
-            </figure> -->
-            <figure>
-                <img src="https://loremflickr.com/800/600/" alt="imagen">
-                <figcaption>ALBUM_11</figcaption>
-            </figure>
-            <!-- <figure>
-                <img src="/img/galeria/limones.jpg" alt="LIMONES.JPG">
-                <figcaption>ALBUM_12</figcaption>
-            </figure> -->
-        </section>
-
+        <div class="slide">
+            <div class="slide-inner">
+                <input class="slide-open" type="radio" id="slide-1" 
+                      name="slide" aria-hidden="true" hidden="" checked="checked">
+                <div class="slide-item">
+                    <img src="https://loremflickr.com/1440/1200/paris">
+                </div>
+                <input class="slide-open" type="radio" id="slide-2" 
+                      name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="https://loremflickr.com/1440/1200/">
+                </div>
+                <input class="slide-open" type="radio" id="slide-3" 
+                      name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="https://loremflickr.com/1440/1200/beach">
+                </div>
+                <label for="slide-3" class="slide-control prev control-1">‹</label>
+                <label for="slide-2" class="slide-control next control-1">›</label>
+                <label for="slide-1" class="slide-control prev control-2">‹</label>
+                <label for="slide-3" class="slide-control next control-2">›</label>
+                <label for="slide-2" class="slide-control prev control-3">‹</label>
+                <label for="slide-1" class="slide-control next control-3">›</label>
+                <ol class="slide-indicador">
+                    <li>
+                        <label for="slide-1" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-2" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-3" class="slide-circulo">•</label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    
+    
+       
     </main>
     <footer>
         <nav class="menuFooter">
