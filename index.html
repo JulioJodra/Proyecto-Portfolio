@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(/img/decoracion/abstracto.jpeg);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'miFuente';
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+
+        header {
+            display: flex;
+            height: fit-content;
+            width: 100vw;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        main {
+            display: flex;
+            width: 100vw;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            /* display: flex; */
+            /* height: 10vh; */
+            width: 100vw;
+            flex-direction: column;
+            background: rgba(97, 92, 92, 1);
+        }
+
+        h1 {
+            margin: 0;
+            letter-spacing: 0.5ex;
+            margin-left: 2rem;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0;
+        }
+
+        a {
+            display: inline-flex;
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            font-size: 1rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .textoCabecera {
+            display: flex;
+            width: 90vw;
+            max-width: 600px;
+            color: rgba(255, 255, 255, 1);
+            font-weight: bold;
+            font-size: 3rem;
+            text-align: left;
+            font-family: inherit, sans-serif;
+            margin: 2rem;
+        }
+
+        .contFotoCabecera {
+            display: flex;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .fotoCabecera {
+            display: flex;
+            width: 100%;
+            /* max-height: 300px; */
+        }
+
+        .menuFooter {
+            display: flex;
+            width: 100vw;
+            flex-direction: column;
+        }
+
+        .galerias {
+            display: flex;
+            width: 90vw;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            margin-bottom: 1rem;
+        }
+
+        .marco {
+            flex-basis: calc(33% - 1rem);
+            max-width: 33%;
+            height: 40vh;
+            margin-bottom: 1rem;
+            /* background-color: ; */
+            text-align: center;
+            padding: 0.5rem;
+            /* border-radius: 2%; */
+        }
+
+        .foto {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .menu {
+            
+            width:100vw;
+            max-width:820px;
+            height: 3.5rem;
+            position: relative;
+            top: -3.5rem ;
+            left: 25rem;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            background-color:transparent;
+            text-shadow: 1px 1px darkslategray;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            transition: 1s all ease;
+            
+            
+        }
+
+        .menu:hover {
+            position: relative;
+            top: 0;
+            background-color: rgba(97, 92, 92, 1);
+        }
+
+        .menuPestaña {
+           
+            position: relative;
+            top: 25px;
+            left:40px;
+            font-size: 0.9rem;
+            color: white;
+        }
+        .menuPie{
+            display:flex;
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .textoCabecera {
+                font-size: 2rem;
+                margin: 1rem;
+            }
+
+            .marco {
+                flex-basis: calc(50% - 1rem);
+                max-width: 50%;
+                height: 30vh;
+            }
+            .menu{
+                flex-basis: calc(50% - 1rem);
+                font-size: 2rem;
+                left: 1rem;
+                top: -4.5rem;
+            }
+            a{
+                font-size: 0.50rem;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .textoCabecera {
+                font-size: 1.75rem;
+                margin: 1rem;
+            }
+
+            .marco {
+                flex-basis: calc(50% - 1rem);
+                max-width: 50%;
+                height: 30vh;
+            }
+            .menu{
+                flex-basis: calc(40% - 1rem);
+                font-size: 1.75rem;
+                left: 1rem;
+                top: -4.5rem;
+            }
+            a{
+                font-size: 0.40rem;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .textoCabecera {
+                font-size: 1.5rem;
+                margin: 0.5rem;
+            }
+
+            .marco {
+                flex-basis: calc(100% - 1rem);
+                max-width: 100%;
+                height: 20vh;
+                
+            }
+            .menu{
+                flex-basis: calc(100% - 1rem);
+                font-size:1.5rem;
+                left: 1rem;
+                top: -4.5rem;
+            }
+            a{
+                font-size: 0.25;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+<header>
+    <h1 class="textoCabecera">PORTFOLIO</h1>
+    <div class="contFotoCabecera">
+        <img class="fotoCabecera" src="/img/decoracion/esperando.gif" alt="">
+    </div>
+
+    <nav>
+        <nav class="menuHeader">
+            <ul class="menu">
+                <a class="menuPestaña">▼</a>
+                <a href="/Galeria.html">Álbumes</a>
+                <a href="/Informacion.html">Información</a>
+                <a href="/compartir.html">Compartir</a>
+                <a class="menuPestaña"></a>
+            </ul>
+        </nav>
+    </nav>
+</header>
+<main>
+    <div class="galerias">
+        <figure class="marco"><img class="foto" src="/img/coche.jpg" alt=""></figure>
+        <figure class="marco"><img class="foto" src="/img/Harley.jpg" alt=""></figure>
+        <figure class="marco"><img class="foto" src="/img/rinovertical.jpg" alt=""></figure>
+    </div>
+
+    <div class="galerias">
+        <figure class="marco"><img class="foto" src="/img/flores.jpg" alt=""></figure>
+        <figure class="marco"><img class="foto" src="/img/gatovertical.jpg" alt=""></figure>
+        <figure class="marco"><img class="foto" src="/img/leopardo.jpg" alt=""></figure>
+
+    </div>
+
+    <div class="galerias">
+        <figure class="marco"><img class="foto" src="/img/puente.jpg" alt=""></figure>
+        <figure class="marco"><img class="foto" src="/img/gaviota.jpg" alt=""></figure>
+        <figure class="marco"><img class="foto" src="/img/sunopor.jpg" alt=""></figure>
+    </div>
+
+    <div class="galerias">
+        <figure class="marco"><img class="foto" src="https://loremflickr.com/520/420/" alt=""></figure>
+        <figure class="marco"><img class="foto" src="https://loremflickr.com/640/520/" alt=""></figure>
+        <figure class="marco"><img class="foto" src="https://loremflickr.com/800/600/" alt=""></figure>
+    </div>
+
+    <div class="galerias">
+        <figure class="marco"><img class="foto" src="https://loremflickr.com/520/420/newyork/" alt=""></figure>
+        <figure class="marco"><img class="foto" src="https://loremflickr.com/640/520/paris/" alt=""></figure>
+        <figure class="marco"><img class="foto" src="https://loremflickr.com/800/600/roma/" alt=""></figure>
+    </div>
+
+</main>
+<footer>
+    <nav class="menuFooter">
+        <ul class="menuPie">
+            <a href="/Galeria.html">Galería</a>
+            <a href="/Informacion.html">Información</a>
+            <a href="/desarrolladores.html">Desarrolladores</a>
+            <a href="/ayuda.html">Ayuda</a>
+            <a href="/condiciones.html">Condiciones</a>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>

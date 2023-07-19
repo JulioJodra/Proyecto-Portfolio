@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayuda</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
+
         @font-face {
             font-family: 'miFuente';
             src: url(fonts/BowlbyOneSC-Regular.ttf);
         }
-        body{
-            margin:0%;
+
+        body {
+            margin: 0%;
             background-image: url(/img/decoracion/abstracto.jpeg);
             font-family: 'miFuente';
             background-size: cover;
-            
         }
-        header{
-            display:flex;
-            height:7% ;
+
+        header {
+            display: flex;
+            height: 7%;
             width: 100%;
-            background: rgba(97,92,92,1);
+            background: rgba(97, 92, 92, 1);
             flex-direction: column;
-
-          
-
         }
-        main{
-           
+
+        main {
             width: 100vw;
             height: 80vh;
             display: flex;
-            justify-content:space-evenly;
+            
+            justify-content: space-evenly;
             align-items: center;
-
-
         }
-        footer{
-            display:flex;
+
+        footer {
+            display: flex;
             height: 10%;
             width: 100%;
-            background: rgba(97,92,92,1);
+            background: rgba(97, 92, 92, 1);
             flex-direction: column;
+        }
 
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            padding: 0;
         }
-        
-        ul{
-            display:flex;
-            justify-content:space-evenly;
-       
-        }
-        a{
-            display:inline-flex;
-            color: rgba(255,255,255,1);
-            top: 198px;
-            left: 188px;
+
+        a {
+            display: inline-flex;
+            color: rgba(255, 255, 255, 1);
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
             font-size: 1.5rem;
             letter-spacing: 0.3rem;
             text-transform: uppercase;
-            
+            text-decoration: none;
         }
+
         div {
-            width: 40%;
+            width: 90%;
             height: 90%;
             border: solid slategray;
             border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-        }
-        h1, p{
+        h1,
+        p {
             padding: 0.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            overflow: hidden;
         }
+       
+        
         figure {
-            width: 40%;
+            width: 90%;
             height: 90%;
             display: flex;
             flex-direction: column;
@@ -86,35 +96,33 @@
             border-radius: 25px;
             align-items: center;
         }
+
         img {
             height: 60%;
-            /* padding: 1rem; */
+            width: 100%;
+            object-fit: cover;
         }
+
         figcaption {
             font-size: 0.5rem;
             padding: 0.2rem;
             width: fit-content;
-            /* height: 10%; */
             background-color: black;
             color: white;
             border-radius: 25px;
         }
-      
-
-
     </style>
 </head>
+
 <body>
     <header>
         <nav class="menuHeader">
             <ul>
-                <a href="/PortfolioHome.html">Galeria</a> 
+                <a href="/index.html">Galeria</a>
                 <a href="/informacion.html">Informacion</a>
                 <a href="/compartir.html">Compartir</a>
             </ul>
         </nav>
-        
-
     </header>
     <main>
         <div>
@@ -129,22 +137,18 @@
 
         <figure>
             <img src="/img/decoracion/ayuda.svg" alt="camaraFotos">
-            
         </figure>
-
     </main>
     <footer>
         <nav class="menuFooter">
             <ul>
-                <a href="/PortfolioHome.html">Galeria</a>
+                <a href="/index.html">Galeria</a>
                 <a href="/Informacion.html">Informacion</a>
                 <a href="/desarrolladores.html">Desarrolladores</a>
-                <!-- <a href="/ayuda">Ayuda</a> -->
                 <a href="/condiciones.html">Condiciones</a>
             </ul>
         </nav>
-
     </footer>
-    
 </body>
+
 </html>
